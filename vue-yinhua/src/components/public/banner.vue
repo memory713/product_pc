@@ -134,12 +134,12 @@ export default {
 	color:rgba(102,102,102,1);
 }
 .banner-up{
-	width:1280px;
+	width:1150px;
 	position: absolute;
 	top:25px;
 	z-index: 2;
 	left:50%;
-	margin-left: -640px;
+	margin-left: -575px;
 }
 .banner-up-box{
 	width:470px;
@@ -179,7 +179,7 @@ export default {
 }
 .banner-body-left-box{
 	margin-bottom:8px;
-	border:2px solid #fff;
+	border:1px solid #fff;
 }
 .cur {
    border:2px solid #000;

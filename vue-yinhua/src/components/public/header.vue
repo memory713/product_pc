@@ -1,21 +1,31 @@
 <template>
   <div class="header">
     <ul class="header-box">
-    	<li><span class="weight">HOME</span><span>首页</span></li>
-    	<li><span class="weight">PORTFOLIO</span><span>作品展示</span></li>
-    	<li><span class="weight">ATLAS</span><span>设计师图集</span></li>
+        <router-link :to="{ path:'/' }">
+    	   <li><span class="weight">HOME</span><span>首页</span></li>
+        </router-link>
+        <router-link :to="{ path:'/works' }">
+    	   <li><span class="weight">PORTFOLIO</span><span>作品展示</span></li>
+        </router-link>
+        <router-link :to="{ path:'/atlas' }">
+    	   <li><span class="weight">ATLAS</span><span>设计师图集</span></li>
+        </router-link>
     </ul>
     <div class="header-logo  header-box">
     	<div style="width:100%;"><span><img src="../../assets/logo.png"></span>
     	<span>共客印花</span></div>
     </div>
     <ul class="header-box">
-    	<li><span class="weight">FASHON</span><span>时尚资讯</span></li>
-    	<li><span class="weight">DESIGNER</span><span>设计师</span></li>
+        <router-link :to="{ path:'/fashon' }">
+    	   <li><span class="weight">FASHON</span><span>时尚资讯</span></li>
+        </router-link>
+        <router-link :to="{ path:'/designer' }">
+    	   <li><span class="weight">DESIGNER</span><span>设计师</span></li>
+        </router-link>
     	<div class="header-search">
-    		<span class="header-button">登陆 </span>
+    		<span class="header-button" @click="logon(1)">登陆 </span>
     		<span style="width:30px;"> | </span>
-    		<span class="header-button"> 注册</span>
+    		<span class="header-button" @click="logon(2)"> 注册</span>
     	</div>
     </ul>
     
@@ -27,6 +37,13 @@ export default {
   data () {
     return {
       
+    }
+  },
+  methods:{
+    logon(id){
+        console.log(id)
+        let routeData = this.$router.resolve({ path: '/logon', query: { id: id } });
+        window.open(routeData.href, '_blank');
     }
   }
 }
@@ -56,8 +73,13 @@ export default {
 	justify-content:center;
 	line-height: 30px;
 	font-size: 14px;
+    cursor: pointer;
 }
 .weight{
 	font-size: 12px;
 }
+.header-button:hover {
+    color:#AF9161;
+}
+
 </style>

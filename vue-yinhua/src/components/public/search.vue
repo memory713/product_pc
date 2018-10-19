@@ -71,7 +71,7 @@ export default {
 .search-button{height: 34px;width:34px;background: url(../../assets/search.png) center;margin-left: 15px;}
 /deep/ .el-input__inner{
 	border:none;
-	height: 32px;
+	height: 30px;
 	color:rgba(35,35,35,1);
 }
 /deep/ .el-select{

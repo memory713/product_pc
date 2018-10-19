@@ -2,24 +2,23 @@
   <div>
     <Header></Header>
     <Search></Search>
-    <Banner></Banner>
-    <Latest-boutique></Latest-boutique>
-    <Traditional></Traditional>
-    <Abstract></Abstract>
-    <Joint></Joint>
-    <Footer></Footer>
+    <WorksMoreBody></WorksMoreBody>
+    <Footer2></Footer2>
   </div>
 </template>
 <script>
 export default {
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
- 
+.style-bgi{
+  width: 100%;
+  margin-top:30px;
+  background: url(../assets/worksMoreBG.png) no-repeat 100% 100%;
+}
 </style>
