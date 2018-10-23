@@ -29,13 +29,20 @@ import atlasStyle3 from '@/components/atlas/atlasStyle3'
 import fashonStyle from '@/components/fashon/fashonStyle'
 import fashonStyle2 from '@/components/fashon/fashonStyle2'
 
+// logon
+import mouseSlide from '@/components/public/mouseSlide'
+// center
+import centerTop from '@/components/center/centerTop'
 
 
 import 'swiper/dist/css/swiper.css';
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import VDistpicker from 'v-distpicker'
+import $ from 'jquery'
 
+Vue.component('v-distpicker', VDistpicker)
 Vue.use(ElementUI);
 
 Vue.component('Header',Header)
@@ -63,6 +70,10 @@ Vue.component("atlasStyle3",atlasStyle3)
 // fashon
 Vue.component("fashonStyle",fashonStyle)
 Vue.component("fashonStyle2",fashonStyle2)
+// login
+Vue.component("mouseSlide",mouseSlide)
+// center
+Vue.component("centerTop",centerTop)
 
 
 Vue.config.productionTip = false

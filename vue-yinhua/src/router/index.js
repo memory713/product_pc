@@ -8,6 +8,7 @@ import designer from '@/components/designer'
 import atlas from '@/components/atlas'
 import fashon from '@/components/fashon'
 import logon from '@/components/logon'
+import center from '@/components/center'
 
 Vue.use(Router)
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/fashon',
       name: 'fashon',
       component: fashon
+    },
+    {
+      path: '/center',
+      name: 'center',
+      component: center
     },
   
   ]

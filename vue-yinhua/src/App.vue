@@ -29,7 +29,7 @@ table,td,tr,th{font-size:12px;}
 li{list-style-type:none;} 
 img{vertical-align:top;border:0;} 
 ol,ul {list-style:none;} 
-h1,h2,h3,h4,h5,h6{font-size:12px; font-weight:normal;} 
+h1,h2,h3,h4,h5,h6{ font-weight:normal;} 
 address,cite,code,em,th {font-weight:normal; font-style:normal;} 
 a{text-decoration:none; 
 color:#333; }
