@@ -33,6 +33,7 @@ import fashonStyle2 from '@/components/fashon/fashonStyle2'
 import mouseSlide from '@/components/public/mouseSlide'
 // center
 import centerTop from '@/components/center/centerTop'
+import centerList from '@/components/center/centerList'
 
 
 import 'swiper/dist/css/swiper.css';
@@ -74,6 +75,7 @@ Vue.component("fashonStyle2",fashonStyle2)
 Vue.component("mouseSlide",mouseSlide)
 // center
 Vue.component("centerTop",centerTop)
+Vue.component("centerList",centerList)
 
 
 Vue.config.productionTip = false

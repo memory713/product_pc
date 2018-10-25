@@ -9,56 +9,22 @@ import atlas from '@/components/atlas'
 import fashon from '@/components/fashon'
 import logon from '@/components/logon'
 import center from '@/components/center'
+import money from '@/components/money'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-    {
-      path: '/logon',
-      name: 'logon',
-      component: logon
-    },
-    {
-      path: '/works',
-      name: 'works',
-      component: Works
-    },
-    {
-      path: '/worksMore',
-      name: 'worksMore',
-      component: worksMore
-    },
-    {
-      path: '/worksDetails',
-      name: 'worksDetails',
-      component: worksDetails
-    },
-    {
-      path: '/designer',
-      name: 'designer',
-      component: designer
-    },
-    {
-      path: '/atlas',
-      name: 'atlas',
-      component: atlas
-    },
-    {
-      path: '/fashon',
-      name: 'fashon',
-      component: fashon
-    },
-    {
-      path: '/center',
-      name: 'center',
-      component: center
-    },
+  routes: [ 
+    { path: '/',name: 'HelloWorld',component: HelloWorld },
+    { path: '/logon',name: 'logon',component: logon },
+    { path: '/works',name: 'works',component: Works },
+    { path: '/worksMore',name: 'worksMore',component: worksMore },
+    { path: '/worksDetails',name: 'worksDetails', component: worksDetails },
+    { path: '/designer',name: 'designer',component: designer },
+    { path: '/atlas',  name: 'atlas',  component: atlas },
+    { path: '/fashon',  name: 'fashon',  component: fashon },
+    { path: '/center',  name: 'center',  component: center },
+    { path: '/money',  name: 'money',  component: money },
   
   ]
 })
