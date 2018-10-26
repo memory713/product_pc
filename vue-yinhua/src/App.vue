@@ -35,4 +35,6 @@ a{text-decoration:none;
 color:#333; }
 div{box-sizing: border-box;}
 input{border:none;outline:none;}
+.ellipsis{white-space: nowrap;text-overflow:ellipsis;overflow:hidden;}
+
 </style>

@@ -10,7 +10,9 @@
         <router-link :to="{ path:'/money' }">
           <li class="centerlist-li" :style="(routeName=='money') ? 'color:#A4885A;' : ''"><span :class="(routeName=='money') ? 'checkedRouter2' : 'centerlist-li-span'"></span>财务明细</li>
         </router-link>
-        <li class="centerlist-li" :style="(routeName=='business') ? 'color:#A4885A;' : ''"><span :class="(routeName=='business') ? 'checkedRouter2' : 'centerlist-li-span'"></span>交易记录</li>
+        <router-link :to="{ path:'/business' }">
+          <li class="centerlist-li" :style="(routeName=='business') ? 'color:#A4885A;' : ''"><span :class="(routeName=='business') ? 'checkedRouter2' : 'centerlist-li-span'"></span>交易记录</li>
+        </router-link>
         <li class="centerlist-li" :style="(routeName=='data') ? 'color:#A4885A;' : ''"><span :class="(routeName=='data') ? 'checkedRouter2' : 'centerlist-li-span'"></span>资料和账号</li>
         <li class="centerlist-li" :style="(routeName=='message') ? 'color:#A4885A;' : ''"><span :class="(routeName=='message') ? 'checkedRouter2' : 'centerlist-li-span'"></span>我的消息</li>
         <li class="centerlist-li" :style="(routeName=='follow') ? 'color:#A4885A;' : ''"><span :class="(routeName=='follow') ? 'checkedRouter2' : 'centerlist-li-span'" ></span>我的关注</li>

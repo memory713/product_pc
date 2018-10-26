@@ -10,6 +10,10 @@ import fashon from '@/components/fashon'
 import logon from '@/components/logon'
 import center from '@/components/center'
 import money from '@/components/money'
+import business from '@/components/business'
+import atlasMore from '@/components/atlasMore'
+import atlasDetais from '@/components/atlasDetais'
+
 
 Vue.use(Router)
 
@@ -25,6 +29,10 @@ export default new Router({
     { path: '/fashon',  name: 'fashon',  component: fashon },
     { path: '/center',  name: 'center',  component: center },
     { path: '/money',  name: 'money',  component: money },
+    { path: '/business',  name: 'business',  component: business },
+    { path: '/atlasMore',  name: 'atlasMore',  component: atlasMore },
+    { path: '/atlasDetais',  name: 'atlasDetais',  component: atlasDetais },
+    
   
   ]
 })

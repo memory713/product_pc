@@ -115,7 +115,7 @@ background-size: 100% 100%;}
   margin-right: 10px;
   line-height: 20px;
 }
-.worksMoreBody-main-top{position: relative;overflow: hidden;}
+.worksMoreBody-main-top{position: relative;overflow: hidden;cursor: pointer;}
 .worksMoreBody-main-meng{position: absolute;background-color: rgba(0,0,0,0.5);top:-100%;left: 0;height: 100%;width: 100%;display: flex;justify-content: center;transition: all 1s;}
 .worksMoreBody-main-hover:hover .worksMoreBody-main-meng{
   top: 0;

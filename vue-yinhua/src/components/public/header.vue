@@ -40,7 +40,10 @@
                 <router-link :to="{ path:'/money' }">
                     <li :class="(routeName=='money') ? 'checkedRouter' : ''">财务明细</li>
                 </router-link>
-                <li>交易记录</li><li>资料和账号</li><li>我的消息</li><li>我的关注</li><li >退出登录</li>
+                <router-link :to="{ path:'/business' }">
+                    <li :class="(routeName=='business') ? 'checkedRouter' : ''">交易记录</li>
+                </router-link>
+                    <li>资料和账号</li><li>我的消息</li><li>我的关注</li><li >退出登录</li>
             </ul>
         </div>
         

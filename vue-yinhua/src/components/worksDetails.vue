@@ -2,8 +2,8 @@
   <div>
     <Header></Header>
     <Search></Search>
-  
   	<WorksDetailsBody></WorksDetailsBody>
+    <WorksDetailsRecommend/>
     <Footer2></Footer2>
   </div>
 </template>

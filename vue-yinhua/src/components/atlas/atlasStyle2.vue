@@ -7,6 +7,9 @@
    	<div class="style-header">
    		<div style="position:relative;">
    			<div style="font-size:25px;font-weight:bold;">中国风作品集</div>
+   			<router-link :to="{ path:'/atlasMore' }">
+   				<div style="display:flex;position:absolute;top:10px;right:15%;cursor:pointer;"><img src="../../assets/more2.png" style=""><span style="color:rgba(163,163,163,1);margin:3px 0 0 3px;;">MORE</span></div>
+   			</router-link>
    		</div>
    		<div class="style-line"></div>
    		<div style="font-size:14xp;">CHINESE STYLE COLLECTION</div>

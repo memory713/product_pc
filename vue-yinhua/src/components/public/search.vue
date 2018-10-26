@@ -68,7 +68,7 @@ export default {
 	border-radius:19px;
 	background-color: #fff;
 }
-.search-button{height: 34px;width:34px;background: url(../../assets/search.png) center;margin-left: 15px;}
+.search-button{height: 34px;width:34px;background: url(../../assets/search.png) center;margin-left: 15px;cursor: pointer;}
 /deep/ .el-input__inner{
 	border:none;
 	height: 30px;

@@ -20,6 +20,9 @@ import Style3 from '@/components/works/style3'
 import Style4 from '@/components/works/style4'
 import WorksMoreBody from '@/components/works/worksMoreBody'
 import WorksDetailsBody from '@/components/works/WorksDetailsBody'
+import WorksDetailsRecommend from '@/components/works/WorksDetailsRecommend'
+
+
 
 // atlas
 import atlasStyle from '@/components/atlas/atlasStyle'
@@ -63,6 +66,7 @@ Vue.component("Style3",Style3)
 Vue.component("Style4",Style4)
 Vue.component("WorksMoreBody",WorksMoreBody)
 Vue.component("WorksDetailsBody",WorksDetailsBody)
+Vue.component("WorksDetailsRecommend",WorksDetailsRecommend)
 
 // atlas
 Vue.component("atlasStyle",atlasStyle)

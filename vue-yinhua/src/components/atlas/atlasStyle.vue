@@ -7,6 +7,9 @@
    	<div class="style-header">
    		<div style="position:relative;">
    			<div style="font-size:25px;font-weight:bold;">推荐设计师作品集</div>
+   			<router-link :to="{ path:'/atlasMore' }">
+   				<div style="display:flex;position:absolute;top:10px;right:15%;cursor:pointer;"><img src="../../assets/more2.png" style=""><span style="color:rgba(163,163,163,1);margin:3px 0 0 3px;;">MORE</span></div>
+   			</router-link>
    		</div>
    		<div class="style-line"></div>
    		<div style="font-size:14xp;">RECOMMENDED DESIGNER PORTFOLIO</div>
@@ -16,8 +19,7 @@
 	   		<div class="swiper-wrapper">
 	            <div class="swiper-slide" v-for="itemSwipe in swipe">
 	            	<div style="width:1000px;">
-
-			   			<div class="style-body-left" v-for="itemleft in itemSwipe.swipebox">
+			   			<div class="style-body-left" v-for="itemleft in itemSwipe.swipebox" @click="atlasDetails(itemleft.name)">
 			   				<div class="style-body-left-img">
 			   					<img :src="itemleft.url" class="left-nei-img">
 			   				</div>
@@ -27,7 +29,7 @@
 			   				</div>
 			   				<div style="display:flex;margin-top:10px;"><div class="biaoqian" >花朵</div><div class="biaoqian">水墨</div></div>
 			   			</div>
-		   				<div class="style-body-right-box" v-for="itemright in itemSwipe.swipechilds">
+		   				<div class="style-body-right-box" style="cursor:pointer;" v-for="itemright in itemSwipe.swipechilds" @click="atlasDetails(itemright.name)">
 		   					<div class="style-img-ang-meng">
 		   						<img :src="itemright.url" style="width:100%;height:100%;border-radius: 20px;">
 		   					</div>
@@ -38,7 +40,7 @@
 		   					<div style="display:flex;margin-top:10px;"><div class="biaoqian" >花朵</div><div class="biaoqian">水墨</div></div>
 		   				</div>
 
-		   				<div class="style-body-left" v-for="itemleft in itemSwipe.swipebox2">
+		   				<div class="style-body-left" v-for="itemleft in itemSwipe.swipebox2" @click="atlasDetails(itemleft.name)">
 			   				<div class="style-body-left-img">
 			   					<img :src="itemleft.url" class="left-nei-img">
 			   				</div>
@@ -77,6 +79,13 @@ export default {
       },
       // autoplay:true,
     })        
+  },
+  methods:{
+  	atlasDetails(id){
+      console.log(id)
+      let routeData = this.$router.resolve({ path: '/atlasDetais', query: { id: id } });
+      window.open(routeData.href, '_blank');
+    },
   }
 
 }
@@ -98,7 +107,7 @@ export default {
 	background: url(../../assets/styleline.png) center center;
 }
 .style-body{width:100%;display: flex;justify-content: center;padding:50px 0;position: relative;}
-.style-body-left{width: 50%;display: inline-block;float: left;padding:0 20px;}
+.style-body-left{width: 50%;display: inline-block;float: left;padding:0 20px;cursor: pointer;}
 .style-body-left-details{width: 100%;display: flex;justify-content: space-between;margin-top:10px;}
 .style-body-left-img{width:100%;height: 320px;}
 .left-nei-img{height: 100%;width: 100%;border-radius: 20px;}

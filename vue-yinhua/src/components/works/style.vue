@@ -16,7 +16,7 @@
 	            <div class="swiper-slide" v-for="itemSwipe in swipe">
 	            	<div style="width:1000px;display:flex;">
 			   			<div class="style-body-left" v-for="itemleft in itemSwipe.swipebox">
-			   				<div class="style-body-left-img style-meng-hover">
+			   				<div class="style-body-left-img style-meng-hover" @click="tiaozhuan(itemleft.id)">
 			   					<img :src="itemleft.url" class="left-nei-img">
 			   					<div class="style-meng">
 			   						<div style="margin-top:170px;">
@@ -35,7 +35,7 @@
 			   			</div>
 			   			<div class="style-body-right" >
 			   				<div class="style-body-right-box" v-for="itemright in itemSwipe.swipechilds">
-			   					<div class="style-img-ang-meng style-meng-hover">
+			   					<div class="style-img-ang-meng style-meng-hover" @click="tiaozhuan(itemright.id)">
 			   						<img :src="itemright.url" style="width:100%;height:100%;">
 			   						<div class="style-meng">
 				   						<div style="margin-top:50px;">
@@ -68,9 +68,9 @@ export default {
   data () {
     return {
     	swipe:[
-    	{swipechilds:[{url:'/static/styledemo2.png',price:500,download:20,look:200,name:"花朵的hi和"},{url:'/static/styledemo3.png',price:500,download:20,look:200,name:"花朵的hi和"},{url:'/static/styledemo4.png',price:500,download:20,look:200,name:"花朵的hi和"},{url:'/static/styledemo5.png',price:500,download:20,look:200,name:"花朵的hi和"}],swipebox:[{url:'/static/styledemo1.png',price:500,download:20,look:200,name:"花朵的hi和"}]},
-    	{swipechilds:[{url:'/static/styledemo2.png',price:500,download:20,look:200,name:"花朵的hi和"},{url:'/static/styledemo3.png',price:500,download:20,look:200,name:"花朵的hi和"},{url:'/static/styledemo4.png',price:500,download:20,look:200,name:"花朵的hi和"},{url:'/static/styledemo5.png',price:500,download:20,look:200,name:"花朵的hi和"}],swipebox:[{url:'/static/styledemo1.png',price:500,download:20,look:200,name:"花朵的hi和"}]},
-    	{swipechilds:[{url:'/static/styledemo2.png',price:500,download:20,look:200,name:"花朵的hi和"},{url:'/static/styledemo3.png',price:500,download:20,look:200,name:"花朵的hi和"},{url:'/static/styledemo4.png',price:500,download:20,look:200,name:"花朵的hi和"},{url:'/static/styledemo5.png',price:500,download:20,look:200,name:"花朵的hi和"}],swipebox:[{url:'/static/styledemo1.png',price:500,download:20,look:200,name:"花朵的hi和"}]},
+    	{swipechilds:[{url:'/static/styledemo2.png',price:500,download:20,look:200,name:"花朵的hi和",id:2,},{url:'/static/styledemo3.png',price:500,download:20,look:200,name:"花朵的hi和",id:2,},{url:'/static/styledemo4.png',price:500,download:20,look:200,name:"花朵的hi和",id:2,},{url:'/static/styledemo5.png',price:500,download:20,look:200,name:"花朵的hi和",id:2,}],swipebox:[{url:'/static/styledemo1.png',price:500,download:20,id:1,look:200,name:"花朵的hi和"}]},
+    	{swipechilds:[{url:'/static/styledemo2.png',price:500,download:20,look:200,name:"花朵的hi和",id:2,},{url:'/static/styledemo3.png',price:500,download:20,look:200,name:"花朵的hi和",id:2,},{url:'/static/styledemo4.png',price:500,download:20,look:200,name:"花朵的hi和",id:2,},{url:'/static/styledemo5.png',price:500,download:20,look:200,name:"花朵的hi和",id:2,}],swipebox:[{url:'/static/styledemo1.png',price:500,download:20,id:1,look:200,name:"花朵的hi和"}]},
+    	{swipechilds:[{url:'/static/styledemo2.png',price:500,download:20,look:200,name:"花朵的hi和",id:2,},{url:'/static/styledemo3.png',price:500,download:20,look:200,name:"花朵的hi和",id:2,},{url:'/static/styledemo4.png',price:500,download:20,look:200,name:"花朵的hi和",id:2,},{url:'/static/styledemo5.png',price:500,download:20,look:200,name:"花朵的hi和",id:2,}],swipebox:[{url:'/static/styledemo1.png',price:500,download:20,id:1,look:200,name:"花朵的hi和"}]},
     	]
     }
   },
@@ -81,6 +81,13 @@ export default {
       },
       // autoplay:true,
     })        
+  },
+  methods:{
+  	tiaozhuan(id){
+      console.log(id)
+      let routeData = this.$router.resolve({ path: '/worksDetails', query: { id: id } });
+      window.open(routeData.href, '_blank');
+    },
   }
 
 }
@@ -108,7 +115,7 @@ export default {
 .style-img-ang-meng{height: 185px;}
 .style-body-words{display: flex;justify-content: space-between;margin-top: 10px;}
 
-.style-meng-hover{position: relative;overflow: hidden;}
+.style-meng-hover{position: relative;overflow: hidden;cursor: pointer;}
 .style-meng{position: absolute;height: 100%;width: 100%;background-color: rgba(0,0,0,0.5);z-index: 2;top:-100%;left: 0;display: flex;justify-content: center;transition: all 1s;}
 .style-meng-hover:hover .style-meng{ top: 0; }
 
