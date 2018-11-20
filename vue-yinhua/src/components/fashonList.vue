@@ -1,21 +1,32 @@
 <template>
   <div>
+    <Header></Header>
+    <Search></Search>
+    <div class="style-bgi"></div>
     <div class="fashon-top flex-center">
       <div style="width:1000px;margin:20px 0" class="flex-between">
-        <div >
-          <div class="fashon-top-word" style="font-style:italic;">FASHON NEWS</div>
-          <div class="fashon-top-word">时尚资讯</div>
+        <div ></div>
+        <div class="designer-body-top-search">
+          <input type="" name="" placeholder="搜索">
+          <img src="../assets/search2.png">
         </div>
-        <div>
-          <div class="fashon-top-word2" @click="fashonList(1)">MORE</div>
-          <img src="../../assets/line5.png">
+      </div>
+    </div>
+    <div class="flex-center">
+      <div style="display:flex;width:300px;">
+        <div class="fashonlist-tab" :class="(tabId == 1) ? 'fashonlist-tab-checked' : '' " @click="tabChange(1)">
+          <span></span>
+          <div>时尚资讯</div>
+        </div>
+        <div class="fashonlist-tab" :class="(tabId == 2) ? 'fashonlist-tab-checked' : '' " @click="tabChange(2)">
+          <span></span>
+          <div>流行趋势</div>
         </div>
       </div>
     </div>
 
       <div class="flex-center" >
-        <div style="width:1000px;margin:20px 0;display:flex;height:300px;position:relative;">
-
+        <div style="width:1000px;margin:20px 0;display:flex;position:relative;">
           <div class="fashon-time">
             <div style="position:relative;width:100%;">
               <el-date-picker
@@ -32,30 +43,25 @@
               </ul>
             </div>
           </div>
-
-          <div class="fashon-body-left"><img src="/static/news1.png"></div>
-          <div class="fashon-body-middle"><div class="xiaosanjiao"></div></div>
-          <div class="fashon-body-right">
-            <div style="line-height:50px;color:#666666;font-size:14px;">标题</div>
-            <div style="line-height:25px;">不买一条印花连衣裙，怎么美美地出门不买一条印花连衣裙，怎么美美地出门不买一条印花连衣裙，怎</div>
-            <div style="border-bottom:1px solid #9C9C9C;height:1px;width:100%;margin-top:120px;"></div>
-            <div class="flex-between " style="color:#9C9C9C;line-height:30px;">
-              <div>2018-9-08</div>
-              <div style="cursor:pointer;" @click="fashonDetails(1)" >了解详情</div>
+          <div class="flex-between" style="width:100%;">
+            <div class="fashonList-top-list" v-for="item in 3" @click="fashonDetails()">
+              <img src="/static/fashonlist1.jpg">
+              <div class="fashonList-top-list-word" >jkasjfkjdkasj</div>
             </div>
           </div>
+
         </div>
       </div>
 
       <div class="flex-center" style="position:relative;">
-        <img src="../../assets/gkyh-big.png" style="position:absolute;left:0;">
+        <img src="../assets/gkyh-big.png" style="position:absolute;left:0;">
         <div style="width:1000px;">
           <div class="swiper-container" style="height:350px;">
             <div class="swiper-wrapper">
               <div class="swiper-slide" v-for="item in swiper">
                 <div class="fashon-swipe">
                   <img :src="item.url">
-                  <div class="fashon-swipe-meng" style="cursor:pointer;" @click="fashonDetails(1)">
+                  <div class="fashon-swipe-meng">
                     <div style="line-height:50px;font-size:18px;font-style:italic;">新闻标题</div>
                     <div style="line-height:20px;">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</div>
                   </div>
@@ -66,6 +72,28 @@
           </div>
         </div>
       </div>
+      <img src="../assets/line3.png" style="width:100%;margin:50px 0;" >
+      <div style="width:100%;" class="flex-center" v-for="item in 5">
+        <div class="" style="width:1000px;display:flex;margin-bottom:50px;"  >
+          <img src="/static/fashonlist4.png" style="width:250px;height:200px;margin-right:30px;">
+          <div style="height:200px;border-bottom:1px solid #959595;width:700px;color:#959595;">
+            <div style="color:#343434;font-size:18px;line-height:50px;text-align:left;font-weight:600;">卡拉疯狂的斯拉夫卡是 </div>
+            <div style="height:100px;text-align:left;margin-top:20px;">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</div>
+            <div class="flex-between" style="height:30px;margin-top:">
+              <div>2018-05-12</div>
+              <div style="cursor:pointer;">MORE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <el-pagination
+      :page-size="10"
+      :pager-count="5"
+      style="margin:50px 0;"
+      layout="prev, pager, next"
+      :total="50">
+    </el-pagination>
+    <footer2></footer2>
 
   </div>
 </template>
@@ -79,6 +107,7 @@ export default {
       swiper: [{url:"/static/news3.png",title:"标题",neirong:'内容内容内容内容内容内容'},{url:"/static/news2.png",title:"标题",neirong:'内容内容内容内容内容内容'},{url:"/static/news3.png",title:"标题",neirong:'内容内容内容内容内容内容'},{url:"/static/news2.png",title:"标题",neirong:'内容内容内容内容内容内容'},{url:"/static/news3.png",title:"标题",neirong:'内容内容内容内容内容内容'},{url:"/static/news2.png",title:"标题",neirong:'内容内容内容内容内容内容'},{url:"/static/news2.png",title:"标题",neirong:'内容内容内容内容内容内容'},{url:"/static/news2.png",title:"标题",neirong:'内容内容内容内容内容内容'},{url:"/static/news3.png",title:"标题",neirong:'内容内容内容内容内容内容'},{url:"/static/news2.png",title:"标题",neirong:'内容内容内容内容内容内容'},{url:"/static/news3.png",title:"标题",neirong:'内容内容内容内容内容内容'},{url:"/static/news2.png",title:"标题",neirong:'内容内容内容内容内容内容'},],
       time:[{time:2018,checked:false},{time:2017,checked:false},{time:2016,checked:false},{time:2015,checked:false},{time:2014,checked:true},],
       value5: '',
+      tabId:1,
     }
   },
   mounted(){
@@ -89,7 +118,10 @@ export default {
       slidesPerView : 3,
       slidesPerGroup : 3,
       spaceBetween : 50,
-    })        
+    })
+
+    console.log(this.$route.query.id)
+    this.tabId = this.$route.query.id        
   },
   watch: {
     value5: function () {
@@ -115,21 +147,25 @@ export default {
       }
       
     },
-    fashonList(id){
-      console.log(id)
-      let routeData = this.$router.resolve({ path: '/fashonList', query: { id: id } });
-      window.open(routeData.href, '_blank');
-    },
     fashonDetails(id){
       console.log(id)
       let routeData = this.$router.resolve({ path: '/fashonDetais', query: { id: id } });
       window.open(routeData.href, '_blank');
-    }
+    },
+    tabChange(a){
+      this.tabId = a
+    },
   }
 }
 </script>
 
 <style>
+.style-bgi{
+  width: 100%;
+  height: 100px;
+  margin-top:30px;
+  background: url(../assets/stylebackground.png) 100% 100%;
+}
 .fashon-time{
   position: absolute;
   top:50px;
@@ -171,4 +207,32 @@ export default {
   top:0;
   padding:50px;
 }
+.designer-body-top-search{
+  width: 200px;
+  border-radius: 20px;
+  border: 1px solid rgba(106,106,106,0.5);
+  height: 30px;
+  position: relative;
+}
+.designer-body-top-search input{
+  position: absolute;
+  top: 15%;
+  left: 10px;
+  height: 70%;
+  width: 70%;
+}
+.designer-body-top-search img{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    height: 15px;
+    width: 15px;
+}
+.fashonlist-tab{width:50%;color:#858585;display: flex;font-size: 20px;text-align: center;justify-content: center;cursor: pointer;}
+.fashonlist-tab span{display: inline-block;width: 12px;height: 12px;border-radius: 50%;border:1px solid #858585;margin-right: 20px;margin-top:7px;}
+.fashonlist-tab div{text-align: center;}
+.fashonlist-tab-checked{color:#AF9161;text-decoration: line-through;}
+.fashonlist-tab-checked span{border:1px solid #AF9161;}
+.fashonList-top-list{position: relative;width: 300px;height: 300px;overflow: hidden;cursor: pointer;}
+.fashonList-top-list-word{position:absolute;bottom:0;background-color:rgba(0,0,0,0.8);width:100%;line-height:50px;color:#fff;}
 </style>

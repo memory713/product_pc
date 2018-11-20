@@ -13,6 +13,9 @@ import money from '@/components/money'
 import business from '@/components/business'
 import atlasMore from '@/components/atlasMore'
 import atlasDetais from '@/components/atlasDetais'
+import fashonDetais from '@/components/fashonDetais'
+import fashonList from '@/components/fashonList'
+
 
 
 Vue.use(Router)
@@ -32,6 +35,9 @@ export default new Router({
     { path: '/business',  name: 'business',  component: business },
     { path: '/atlasMore',  name: 'atlasMore',  component: atlasMore },
     { path: '/atlasDetais',  name: 'atlasDetais',  component: atlasDetais },
+    { path: '/fashonDetais',  name: 'fashonDetais',  component: fashonDetais },
+    { path: '/fashonList',  name: 'fashonList',  component: fashonList },
+    // { path: '/fashonDetais',  name: 'fashonDetais',  component: fashonList },
     
   
   ]

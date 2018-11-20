@@ -56,6 +56,9 @@ export default {
   mounted:function(){
     console.log(this.$route.query.id)
   },
+  methods:{
+    
+  }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
