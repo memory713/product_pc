@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <title></title>
+    <link rel="stylesheet" href="commonStyle.css">
+</head>
+
+<body>
+    <!--
+    每个全屏页面div的class为page，其中的图片的class为pageImg
+    ul为右侧的导航栏
+    pageUlLi和page的数目必须相等，修改数目时还应修改最下面js鼠标悬停的跳转代码
+    -->
+    <div>
+        <div class="page1"></div>
+
+        <div id="wrap">
+            <div id="main">
+                <ul id="pageUl" type="circle">
+                    <li id="pageUlLi1" class="pageUlLi" style="color: red;">精馏</li>
+                    <li id="pageUlLi2" class="pageUlLi">薄膜蒸发</li>
+                    <li id="pageUlLi3" class="pageUlLi">结晶</li>
+                    <li id="pageUlLi4" class="pageUlLi">混合与反应技术</li>
+                    <li id="pageUlLi5" class="pageUlLi">萃取</li>
+                </ul>
+                <div id="page1" class="page">
+                    <div class="bgimg"></div>
+                    <div class="box_top" style="top: 80px;">
+                        <!--引入公共html-->
+                        <div class="p1_top content">
+                            <script>
+                                $('.p1_top').load('logos.html');
+                            </script>
+                        </div>
+                        <div class="p1_title content flex">
+                            <h2 class="title_ch">精馏</h2>
+                            <h2 class="title_en bgborder left_20">Distillation</h2>
+                        </div>
+                        <div class="p1_con1">
+                            <div class="p1_con1_left">
+                                <div class="overflow">
+                                    <p class="Ch">
+                                        霍卫的精馏设计是建立在计算机模拟的基础上，同时根据精馏领域丰富经验和专业知识，加上对填料及塔内件的深刻理解，确保提供给客户最佳的工艺解决方案。</p>
+                                    <p class="En break">The designing of a distillation system is generally based on the
+                                        rigorous simulation,tuned and optimized with Hawkwat's know-how and a deep
+                                        understanding of the column packing and internals, so as to provide clients the
+                                        best process solutions in terms of investment and energy consumption.</p>
+                                    <p class="Ch">霍卫不仅可以提供一个包括关键设备（塔体，内件，换热器等）的基础工艺包，而且还提供完整的，通常是SKID模块装置，包括工艺控制和开车指导服务
+                                    </p>
+                                    <p class="En break">Hawkway id able to preovide not only a basic process package and
+                                        the required key equipment such as column shell, internals and reboiler, but
+                                        also a complete skid design with process controllability.</p>
+                                    <p class="Ch">迄今为止，在不同的领域，设计和提供近千个精馏塔设备。</p>
+                                    <p class="En break">So far approximately 1,00 distillation columns have been
+                                        designed and supplied for a variety of services.</p>
+                                </div>
+                                <ul>
+                                    <li><img src="images/productPresentation/jingliu/tianliao/guizheng/1.jpg" alt="">
+                                    </li>
+                                    <li><img src="images/productPresentation/jingliu/tianliao/guizheng/1.jpg" alt="">
+                                    </li>
+                                    <li><img src="images/productPresentation/jingliu/tianliao/guizheng/1.jpg" alt="">
+                                    </li>
+                                    <li><img src="images/productPresentation/jingliu/tianliao/guizheng/1.jpg" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="p1_con1_right">
+                                <h3>霍卫设计的精馏单位优势：</h3>
+                                <h5>Strong capabilities of Hawkway to design the distillation system</h5>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <div class="borders">
+                                                <div class="align">
+                                                    <p>增加生产能力</p>
+                                                    <p>lncrease</p>
+                                                    <p>production</p>
+                                                    <p>capacity</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="borders">
+                                                <div class="align">
+                                                    <p>运行稳定</p>
+                                                    <p>Stable</p>
+                                                    <p>operation</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="borders">
+                                                <div class="align">
+                                                    <p>操作简便</p>
+                                                    <p>Simple</p>
+                                                    <p>operation</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <div class="borders">
+                                                <div class="align">
+                                                    <p>提高产品质量</p>
+                                                    <p>lmprove</p>
+                                                    <p>product</p>
+                                                    <p>quality</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="borders">
+                                                <div class="align">
+                                                    <p>减少能源消耗</p>
+                                                    <p>Reduce</p>
+                                                    <p>energy</p>
+                                                    <p>consumption</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="borders">
+                                                <div class="align">
+                                                    <p>减少三废排放</p>
+                                                    <p>Reduce</p>
+                                                    <p>waste</p>
+                                                    <p>discharge</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p1_con2">
+                            <div class="p1_con2_left">
+                                <h3>产品范围 Product Catalogue:</h3>
+                                <h5>1、 填料 Packing</h5>
+                                <div class="p1_c2_textCon">
+                                    <div class="p1_c2_textCon_img">
+                                        <div>
+                                            <h5>规整填料 Structural packing</h5>
+                                            <ul>
+                                                <li>
+                                                    <div>
+                                                        <div class="top_ch">
+                                                            <p>板波纹</p>
+                                                            <p>填料</p>
+                                                        </div>
+                                                        <div class="bottom_en">
+                                                            <p>Metal plate</p>
+                                                            <p>packing</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <div class="top_ch">
+                                                            <p>丝网</p>
+                                                            <p>填料</p>
+                                                        </div>
+                                                        <div class="bottom_en">
+                                                            <p>Wired mesh</p>
+                                                            <p>packing</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <div class="top_ch">
+                                                            <p>栅格</p>
+                                                            <p>填料</p>
+                                                        </div>
+                                                        <div class="bottom_en">
+                                                            <p>Grid</p>
+                                                            <p>packing</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h5>散堆填料 Random packings</h5>
+                                            <ul>
+                                                <li>
+                                                    <div>
+                                                        <div class="top_ch">
+                                                            <p>金属</p>
+                                                            <p>散堆</p>
+                                                        </div>
+                                                        <div class="bottom_en">
+                                                            <p>Metal</p>
+                                                            <p>random</p>
+                                                            <p>packings</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <div class="top_ch">
+                                                            <p>塑料</p>
+                                                            <p>散堆</p>
+                                                        </div>
+                                                        <div class="bottom_en">
+                                                            <p>Plastic</p>
+                                                            <p>random</p>
+                                                            <p>packings</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <div class="top_ch">
+                                                            <p>陶瓷</p>
+                                                            <p>散堆</p>
+                                                        </div>
+                                                        <div class="bottom_en">
+                                                            <p>Ceramic</p>
+                                                            <p>random</p>
+                                                            <p>packings</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <ul class="p1_c2_textCon_imgcenter">
+                                        <li><img src="images/productPresentation/jingliu/tianliao/guizheng/1.jpg"
+                                                alt=""></li>
+                                        <li><img src="images/productPresentation/jingliu/tianliao/guizheng/2.jpg"
+                                                alt=""></li>
+                                        <li><img src="images/productPresentation/jingliu/tianliao/guizheng/3.jpg"
+                                                alt=""></li>
+                                        <li><img src="images/productPresentation/jingliu/tianliao/sandui/1.png" alt="">
+                                        </li>
+                                    </ul>
+                                    <div class="p1_c2_textCon_text overflow">
+                                        <p class="Ch break">
+                                            霍卫生产的HAWKPAK系列规整填料以其卓越的分离效率及处理能力，降低压降，精良的品质，在精馏分离上的得到了广泛的应用，特别是HAWKPAK丝网填料，以其单位高度下的高理论级，低压降的又是，广泛应用于热敏性体系及分离难度较高的香精香料，制药与细化工品等领域，是weissuE，愈创木酚，脂肪酸，薄荷醇等超真空精馏的最佳选择。
+                                        </p>
+                                        <p class="En break">HAWKPAK is the lates generation of structured packing by
+                                            Hawkway. With the enhancement of the geometric structure applied, the
+                                            pressure drop is low and the maximum capacity can be increased,which have
+                                            been widely uesd in distillation columns.More particularly the wired meh
+                                            packing by HAWKPAK has a large number of theoretical plates per unit meter
+                                            and much lower pressure drop, which have been utilized in the separation of
+                                            mixtures of components having very close boiling points or heat sensitivity
+                                            in the fields of specialty chemicals and pahrmacuticals. The typical
+                                            applications of wired mesh structural packing include, but are not limited
+                                            to, bitamin E,guaiacol,fatty acids, and menthol under the conditions of deep
+                                            vacuum operating in the distillation</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p1_con2_right">
+                                <div class="p1_con2_right_content">
+                                    <p>
+                                        <span class="p1_con2_btncn Ch bg">塔盘</span>
+                                        <span class="p1_con2_btnen En bg">Tarys</span>
+                                        <span class="p1_con2_btncn Ch ">塔内件</span>
+                                        <span class="p1_con2_btnen En">Internals</span>
+                                        <span class="p1_con2_btncn Ch">分离器</span>
+                                        <span class="p1_con2_btnen En">The Separator</span>
+                                    </p>
+                                    <ul>
+                                        <li class="p1_con2_show" style="display: block">
+                                            <div class="p1_con2_r_c_top">
+                                                <p>塔盘 Tarys</p>
+                                                <div class="img_box">
+                                                    <img src="images/productPresentation/jingliu/tapan/1.JPG" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="p1_con2_r_c_bottom">
+                                                <p class="Ch">
+                                                    霍卫能够像客户提供常规固阀，筛板，浮阀以及其他高性能塔盘，同时可以提供工艺计算，水力学计算，工程设计等服务，也可以提供塔盘整体解决方案。
+                                                </p>
+                                                <p class="En">Hawkway can provide customers with process solutions and
+                                                    supply the necessary trays including conventional fixed valve,
+                                                    sieveplate, floating valveand oter high-performance trays after
+                                                    process calculation, hydraulic calculation and engineering design.
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="p1_con2_show">
+                                            <div class="p1_con2_r_c_top">
+                                                <p>塔内件 Internals</p>
+                                                <p>- 分布器 Distributor</p>
+                                                <p>- 收集器 Collector</p>
+                                                <div class="img_box">
+                                                    <img src="images/productPresentation/jingliu/taneijian/1.jpg"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                            <div class="p1_con2_r_c_bottom">
+                                                <p class="Ch">种类多，分布质量优异，弹性大，适用范围广，抗堵，操作周期长。</p>
+                                                <p class="En">Variety, excellent distribution, flexibility,wide range of
+                                                    appliccation, anti-fouling, long operation cycle.</p>
+                                            </div>
+                                        </li>
+                                        <li class="p1_con2_show">
+                                            <div class="p1_con2_r_c_top">
+                                                <p>分离器 The Separator</p>
+                                                <p>- 气-液分离器 Gas-liquid separator</p>
+                                                <p>- 液-液分离器 Liquid-liquid separator</p>
+                                                <div class="img_box">
+                                                    <!--<img src="images/productPresentation/jingliu/fenliqi/1.png" alt="">-->
+                                                </div>
+                                            </div>
+                                            <div class="p1_con2_r_c_bottom">
+                                                <p class="Ch">效率高，处理能力大，压降低，抗堵，应用能力广泛，节约投资。</p>
+                                                <p class="En">High efficiency, high capacity, low pressure drops,
+                                                    anti-fouling, wide range of applicetion, investment saving.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background-color: #5cb85c" id="page2" class="page">
+
+                </div>
+                <div style="background-color: #8a6d3b" id="page3" class="page">
+
+                </div>
+                <div style="background-color: #337ab7" id="page4" class="page">
+
+                </div>
+                <div style="background-color: #66512c" id="page5" class="page">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    //改变窗口大小时调整图片大小
+    window.onload = resizeImages;
+    window.onresize = resizeImages;
+
+    function resizeImages() {
+        $(function (e) {
+            var screenWeight = document.documentElement.clientWidth;
+            var screenHeight = document.documentElement.clientHeight;
+            $("[name=pageImg]").css("width", screenWeight).css("height", screenHeight);
+            $("#pageUl").css("bottom", screenHeight >> 1);
+        });
+    }
+
+    var index = 1;
+    var curIndex = 1;
+    var wrap = document.getElementById("wrap");
+    var main = document.getElementById("main");
+    var hei = document.body.clientHeight;
+    wrap.style.height = hei + "px";
+    var obj = document.getElementsByTagName("div");
+    for (var i = 0; i < obj.length; i++) {
+        if (obj[i].className == 'page') {
+            obj[i].style.height = hei + "px";
+            $('.bgimg').css({ 'height': `${hei}px`, 'background-size': 'cover' })
+        }
+    }
+    var pageNum = document.querySelectorAll(".page").length;
+    //如果不加时间控制，滚动会过度灵敏，一次翻好几屏
+    var startTime = 0, //翻屏起始时间
+        endTime = 0,
+        now = 0;
+    //浏览器兼容
+    if ((navigator.userAgent.toLowerCase().indexOf("firefox") != -1)) {
+        document.addEventListener("DOMMouseScroll", scrollFun, false);
+    } else if (document.addEventListener) {
+        document.addEventListener("mousewheel", scrollFun, false);
+    } else if (document.attachEvent) {
+        document.attachEvent("onmousewheel", scrollFun);
+    } else {
+        document.onmousewheel = scrollFun;
+    }
+
+    //滚动事件处理函数
+    function scrollFun(event) {
+        startTime = new Date().getTime();
+        var delta = event.detail || (-event.wheelDelta);
+        //mousewheel事件中的 “event.wheelDelta” 属性值：返回的如果是正值说明滚轮是向上滚动
+        //DOMMouseScroll事件中的 “event.detail” 属性值：返回的如果是负值说明滚轮是向上滚动
+        if ((endTime - startTime) < -1000) {
+            if (delta > 0 && parseInt(main.offsetTop) > -(hei * (pageNum - 1))) {
+                //向下滚动
+                index++;
+                toPage(index);
+            }
+            if (delta < 0 && parseInt(main.offsetTop) < 0) {
+                //向上滚动
+                index--;
+                toPage(index);
+            }
+            endTime = new Date().getTime();
+        } else {
+            event.preventDefault();
+        }
+    }
+
+    function toPage(index) {
+        //jquery实现动画效果
+        if (index != curIndex) {
+            var delta = index - curIndex;
+            now = now - delta * hei;
+            $("#main").animate({
+                top: (now + 'px')
+            }, 1000);
+            curIndex = index;
+            //更改列表的选中项
+            $(".pageUlLi").css("color", "#ddd");
+            $("#pageUlLi" + index).css("color", "red");
+        }
+        if (index > 1) {
+            $('.page1').css('background', '#00000038')
+        } else {
+            $('.page1').css('background', '#222d32')
+        }
+    }
+
+    //鼠标悬停翻页
+    document.getElementById("pageUlLi1").onclick = function () {
+        toPage(1);
+    };
+    document.getElementById("pageUlLi2").onclick = function () {
+        toPage(2);
+    };
+    document.getElementById("pageUlLi3").onclick = function () {
+        toPage(3);
+    };
+    document.getElementById("pageUlLi4").onclick = function () {
+        toPage(4);
+    };
+    document.getElementById("pageUlLi5").onclick = function () {
+        toPage(5);
+    };
+    $('.p1_con2_btncn').click(function () {
+        let index = $('.p1_con2_btncn').index(this);
+        $('.p1_con2_btncn').eq(index).addClass('bg').siblings().removeClass('bg');
+        $('.p1_con2_show').eq(index).css('display', 'block').siblings().css('display', 'none')
+    })
+    $('.p1_con2_btnen').click(function () {
+        let index = $('.p1_con2_btnen').index(this);
+        $('.p1_con2_btnen').eq(index).addClass('bg').siblings().removeClass('bg');
+        $('.p1_con2_show').eq(index).css('display', 'block').siblings().css('display', 'none')
+    })
+</script>
+
+</html>

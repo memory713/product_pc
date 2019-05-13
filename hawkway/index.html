@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery2.1.4.min.js"></script>
+    <style>
+        .part1 .banner {
+            width: 1400px;
+            margin: 0 auto;
+        }
+
+        .part1 .banner img {
+            width: 100%;
+            height: 450px;
+            vertical-align: middle;
+        }
+
+        .part1 .p1_content_textCh {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .part1 .p1_content_textEn {
+            display: none;
+            margin-top: 10px;
+            font-size: 12px;
+            -ms-word-break: break-all;
+            word-break: break-all;
+            line-height: 14px;
+        }
+
+        .part1 .subject {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .part1 .subject>div {
+            flex: 1;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .part1 .subject .p1_content_left {
+            padding-right: 30px;
+        }
+
+        .part1 .subject .p1_content_right {
+            padding-left: 20px;
+        }
+
+        .part1 .subject .p1_con_left_banner {
+            position: relative;
+            width: 100%;
+            height: 270px;
+        }
+
+        .part1 .subject .p1_con_left_banner span {
+            position: absolute;
+            top: calc(270px/2 - 70px/2);
+            font-size: 38px;
+            color: #767676;
+            background: rgba(0, 0, 0, .3);
+            width: 40px;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+            vertical-align: middle;
+            cursor: pointer;
+            transition: .5s;
+        }
+
+        .part1 .subject .p1_con_left_banner .banner_left {
+            left: 0;
+        }
+
+        .part1 .subject .p1_con_left_banner .banner_right {
+            right: 0;
+        }
+
+        .part1 .subject .p1_con_left_banner span:hover {
+            color: #eee;
+            background: rgba(0, 0, 0, .8);
+        }
+
+        .part1 .subject .p1_con_left_banner li {
+            display: none;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        .part1 .subject .p1_con_left_banner li img {
+            width: 100%;
+            height: 270px;
+        }
+
+        .part1 .subject .p1_con_left_banner li.now {
+            display: block;
+        }
+
+        .part1 .subject .p1_con_left_smallBannerImg {
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            width: 100%;
+            height: 80px;
+        }
+
+        .p1_con_left_smallBannerImg li {
+            flex: 1;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 2px;
+            cursor: pointer;
+        }
+
+        .p1_con_left_smallBannerImg li:first-child {
+            padding-left: 0;
+        }
+
+        .p1_con_left_smallBannerImg li:last-child {
+            padding-right: 0;
+        }
+
+        .p1_con_left_smallBannerImg li img {
+            width: 100%;
+            height: 80px;
+            border: 2px solid transparent;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .p1_con_left_smallBannerImg li img.now {
+            border: 2px solid #ff3e33;
+        }
+
+        .p1_content_right .p1_con_right_titleCh {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1c6bb6;
+            letter-spacing: 7px;
+        }
+
+        .p1_content_right .p1_con_right_titleEn {
+            font-size: 12px;
+            font-weight: bold;
+            color: #1c6bb6;
+        }
+    </style>
+    <link rel="stylesheet" href="commonStyle.css">
+</head>
+
+<body>
+    <div class="page1"></div>
+    <!--引入公共html-->
+    <script>
+        $('.page1').load('header.html');
+    </script>
+    <div class="part1">
+        <!--引入公共html-->
+        <div class="p1_top content">
+            <script>
+                $('.p1_top').load('logos.html');
+            </script>
+        </div>
+        <!--当前页面内容-->
+        <div class="p1_title content flex">
+            <h2 class="title_ch">企业简介</h2>
+            <h2 class="title_en bgborder left_20">Company Profile</h2>
+        </div>
+        <div class="banner"><img src="images/companyProfile/profile6.jpg" alt=""></div>
+        <div class="content subject">
+            <div class="p1_content_left">
+                <div class="p1_con_left_banner">
+                    <ul>
+                        <li class="now"><img src="images/companyProfile/profile1.jpg" alt=""></li>
+                        <li><img src="images/companyProfile/profile2.jpg" alt=""></li>
+                        <li><img src="images/companyProfile/profile3.jpg" alt=""></li>
+                        <li><img src="images/companyProfile/profile7.jpg" alt=""></li>
+                        <li><img src="images/companyProfile/profile8.jpg" alt=""></li>
+                    </ul>
+                    <span class="banner_left">
+                        <</span> <span class="banner_right">>
+                    </span>
+                </div>
+                <ul class="p1_con_left_smallBannerImg">
+                    <li><img src="images/companyProfile/profile1.jpg" class="now" alt=""></li>
+                    <li><img src="images/companyProfile/profile2.jpg" alt=""></li>
+                    <li><img src="images/companyProfile/profile3.jpg" alt=""></li>
+                    <li><img src="images/companyProfile/profile7.jpg" alt=""></li>
+                    <li><img src="images/companyProfile/profile8.jpg" alt=""></li>
+                </ul>
+            </div>
+            <div class="p1_content_right">
+                <h2 class="p1_con_right_titleCh">上海霍卫工艺设备有限公司</h2>
+                <h4 class="p1_con_right_titleEn">SHANGHAI HAWKWAY PROCESS SOLUTIONS & EQUIPMENT CO.,LTD.</h4>
+                <p class="p1_content_textCh">
+                    上海霍卫工艺设备有限公司及其子公司江苏霍卫机械设备有限公司，是集精馏/薄膜蒸发/结晶/混合与反应/萃取工艺开发及设备生产供应商；目前在上海闵行区设有工艺设计及研发中心，江苏启东市设有生产基地及测试中心，其生产的板波纹填料、丝网填料、塔盘、结晶器、萃取塔及聚合物脱挥等分离设备均达到国际领先水平。<br><br>
+                    霍卫提供精馏/薄膜蒸发/结晶/混合与反应/萃取工艺开发、精馏塔设计及结晶器设计、聚合物脱挥工艺开发及设计、模块化设计及制造等整体服务，服务覆盖石化，油脂化工，特殊化学品，精细化工，食品，制药和聚合物等行业领域。尤其在精馏结晶萃取联用分离同分异构体的工艺开发和设计，模块化设计和制造，以及聚合物脱挥和反应等方面有着独特的工程经验。<br><br>
+                    霍卫拥有经验丰富的专家团队，拥有超过15年以上工艺工程设计和生产制造经验；自公司成立以来，霍卫已陆续为行业客户提供近千台塔器和上百套解决方案，累计年销售额上亿元。
+                </p>
+                <p class="p1_content_textEn">
+                    Shanghai Hawkway Process Solutions & Equipment Co., Ltd. along with its wholly owned subsidiary,
+                    Jiangsu Hawkway Machinery Equipment Co., Ltd. specializes in the development of chemical processes,
+                    which involve one or a combination of the following units such as distillation, evaporation,
+                    crystallization, mixing, polymerization and extraction, and furthermore serves as a related chemical
+                    equipment supplier. Headquartered in Shanghai, Shanghai Hawkway Process Solutions & Equipment Co.,
+                    Ltd. has an engineering design and inovation center. Jiangsu Hawkway Machinery Equipment Co., Ltd,
+                    located in Qidong of Jiangsu, mainly focusing on the manufacturing of the structure packing
+                    including metal sheet packings and wired mesh packing, trays and distributors, crystallizer,
+                    extraction column and polymer devolatilization and reaction equipment, all of which are of high
+                    quality at a competitive price.<br><br>
+                    The company is able to develop processes involving distillation, film evaporation, crystallization,
+                    mixing, polymerization, polymer devolatilization, modular facilities and etc. The services are
+                    exposed to a variety of fields, among which are petroleum refining, petrochemical, fine chemicals,
+                    grease chemicals, coal chemicals, steel chemicals, air separation, food, pharmaceutical and polymer
+                    industries. Of all the know-how and skills, the company has demonstrated unique expertise in the
+                    development of separation of isomers using a combination of distillation, crystallization and
+                    extraction columns, skid design and manufacturing, as well as polymer devolatilization and
+                    reaction.<br><br>
+                    Most of the team members have more than 15 years of working experiences in their respective
+                    departments such as process, engineering design and operational production. Since its establishment
+                    the company has supplied more than 100 process solutions of nearly 1,000 columns, with an annual
+                    sales turnover of about 0.1 billion RMB.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="f_nav">
+            <div class="waves1">
+                <div class="waves1_box fl"></div>
+                <div class="waves1_box fl"></div>
+            </div>
+            <div class="waves2">
+                <div class="waves2_box fl"></div>
+                <div class="waves2_box fl"></div>
+            </div>
+        </div>
+        <div class="footer_content">
+            <div class="content">
+                <ul>
+                    <li>
+                        <a href="">企业介绍</a>
+                    </li>
+                    <li>
+                        <a href="">企业文化</a>
+                    </li>
+                    <li>
+                        <a href="">薄膜蒸发</a>
+                    </li>
+                    <li>
+                        <a href="">混合与反应技术</a>
+                    </li>
+                    <li>
+                        <a href="">基础工厂包</a>
+                    </li>
+                </ul>
+                <div class="footer_logo">Hawkway</div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p class="content">霍卫上海 Hawkway - Collect from 沪ICP备18046523号-1</p>
+        </div>
+    </div>
+</body>
+<script>
+    {
+        localStorage.setItem("language", "English");
+        let language = localStorage.getItem("language");
+        if (language) {
+            if (language === 'English') {
+                $('.p1_content_textEn').css('display', 'block')
+                $('.p1_content_textCh').css('display', 'none')
+            }
+        } else {
+            $('.p1_content_textEn').css('display', 'none')
+            $('.p1_content_textCh').css('display', 'block')
+        }
+    }
+    {
+        let index = 0;
+        let timers = null;
+        //
+        function nextFn() {
+            index++;
+            if (index >= $('.p1_con_left_banner li').length) index = 0;
+            $('.p1_con_left_banner li').eq(index).addClass('now').siblings().removeClass('now');
+            $('.p1_con_left_smallBannerImg li').eq(index).children().addClass('now');
+            $('.p1_con_left_smallBannerImg li').eq(index).siblings().children().removeClass('now');
+        }
+        // 执行定时器
+        timers = setInterval(function () {
+            nextFn()
+        }, 3000);
+        // 移入停止定时器
+        $('.p1_content_left').mouseenter(function () {
+            clearInterval(timers)
+        });
+        $('.p1_content_left').mouseleave(function () {
+            timers = setInterval(function () {
+                nextFn()
+            }, 3000);
+        });
+        // 下一页
+        $('.banner_right').click(function () {
+            nextFn();
+        });
+        // 上一页
+        $('.banner_left').click(function () {
+            index--;
+            if (index < 0) index = $('.p1_con_left_banner li').length - 1;
+            $('.p1_con_left_banner li').eq(index).addClass('now').siblings().removeClass('now');
+            $('.p1_con_left_smallBannerImg li').eq(index).children().addClass('now');
+            $('.p1_con_left_smallBannerImg li').eq(index).siblings().children().removeClass('now');
+        });
+        // 点击小图，大图跳转对应内容
+        $('.p1_con_left_smallBannerImg').on('click', 'li', function () {
+            $(this).children().addClass("now");
+            $(this).siblings().children().removeClass("now");
+            // 获取当前点击li 的下标
+            let nowindex = $(this).index();
+            $('.p1_con_left_banner li').eq(nowindex).addClass('now').siblings().removeClass('now');
+            index = nowindex;
+        })
+    }
+
+</script>
+
+</html>
