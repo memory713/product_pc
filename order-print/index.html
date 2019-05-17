@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A4</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="print" @click='printdata'>打印</div>
+        <div class="page" id="information1">
+            <div class="top">
+                <div class="top-r">
+                    <div>宇中青</div>
+                    <div class="top-r-bg"></div>
+                </div>
+                <img src="R.png" alt="" class="R">
+                <div class="paigong">派工单</div>
+                <div class="bianhao">
+                    编号：<span>0004251</span>
+                </div>
+            </div>
+            <div class="part2" style="display:flex;">
+                <div class="part2-left">
+                    <div class="block" style="opacity:0;">空白占位</div>
+                    <div class="block ">项目名称：</div>
+                    <div class="block">自制件单号：</div>
+                </div>
+                <div class="part2-right">
+                    <div class="block">合并号</div>
+                    <div class="flex line">
+                        <div style="width:20%;">制单：</div>
+                        <div style="width:20%;">日期：</div>
+                        <div>投产日期：</div>
+                    </div>
+                    <div class="flex line">
+                        <div style="width:20%;">审核：</div>
+                        <div style="width:20%;">日期：</div>
+                        <div>完工日期：</div>
+                    </div>
+                </div>
+            </div>
+            <div class="part3 flex">
+                <div class="part3-left">
+                    <div class="flex" style="line-height:1.5cm;">
+                        <div class="part3-left-title">生产明细</div>
+                        <div class="part3-left-input">工序：</div>
+                        <div class="part3-left-input">材料：</div>
+                        <div class="part3-left-input">核算类别：</div>
+                    </div>
+                    <table border="1" class="table2">
+                        <tr>
+                            <td v-for="item in table2">{{item}}</td>
+                        </tr>
+                        <tr v-for="item in 5">
+                            <td v-for="item in table2.length"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>合计</td>
+                            <td v-for="item in table2.length-2"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="part3-right">
+                    <div class="part3-right-box block" v-for="item in part3Right">
+                        <div class="block flex">
+                            <div class="right-box-part">{{item.name}}
+                                <div class="part3-right-box-input"></div>
+                                张</div>
+                            <div class="right-box-part">清单
+                                <div class="part3-right-box-input"></div>
+                                张</div>
+                        </div>
+                        <div class="block flex">
+                            <div class="right-box-part">签字：</div>
+                            <div class="right-box-part">日期：</div>
+                        </div>
+                    </div>
+                    <table border="1" class="table1 part3-right-box">
+                        <tr>
+                            <td>月份</td>
+                            <td>实际工时（h）</td>
+                        </tr>
+                        <tr v-for="item in 3">
+                            <td v-for="item in 2"></td>
+                        </tr>
+                    </table>
+                    <div class="right-word">第一联工资核算</div>
+                </div>
+            </div>
+            <div class="part4 flex">
+                <div class="part4-left" style="width:80%;">
+                    <table border="1" class="table3">
+                        <tr>
+                            <td colspan="2">
+                                <div class="table3-zhan"></div> 年 <div class="table3-zhan"></div> 月
+                            </td>
+                            <td v-for="item in 10" colspan="2"></td>
+                            <td colspan="2">合计(h)</td>
+                            <td rowspan="2" style="width: 5%;">合计(元)</td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">序号</td>
+                            <td style="width: 8%;">姓名</td>
+
+                            <td>厂</td>
+                            <td>外</td>
+                            <td>厂</td>
+                            <td>外</td>
+                            <td>厂</td>
+                            <td>外</td>
+                            <td>厂</td>
+                            <td>外</td>
+                            <td>厂</td>
+                            <td>外</td>
+                            <td>厂</td>
+                            <td>外</td>
+                            <td>厂</td>
+                            <td>外</td>
+                            <td>厂</td>
+                            <td>外</td>
+                            <td>厂</td>
+                            <td>外</td>
+                            <td>厂</td>
+                            <td>外</td>
+
+                            <td>出勤</td>
+                            <td>加班</td>
+                        </tr>
+                        <tr v-for='item in 5'>
+                            <td v-for='item in 25'></td>
+                        </tr>
+                    </table>
+                    <div class="beizhu flex" style="font-size:12px;margin-top:0.2cm;">
+                        <div style="width:2.1cm;">备注：</div>
+                        <div>
+                            <div>1.派工单是员工计算工资的依据。本表一式三联，第一联用于工资核算，第二联组长持有，第三联留底。</div>
+                            <div>2.单据、图纸及清单各部门妥善保管，丢失责任自负。</div>
+                            <div>3.工时单价管理部统一定制，其他参照<标准件工时定额>和《车间计件参考表》执行。</div>
+                            <div>4.员工自行与车间统计核对工时，如中间有变动必须主动说明并做好备注。</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="part4-right" style="width:20%;">
+                    <table class="table4" border="1">
+                        <tr>
+                            <td colspan="2">检验结果</td>
+                        </tr>
+                        <tr>
+                            <td>合格<div class="table4-check"></div>
+                            </td>
+                            <td rowspan="4" class="table4-beizhu">
+                                <div>备注：</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>不合格<div class="table4-check"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>报废<div class="table4-check"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>其他<div class="table4-check"></div>
+                            </td>
+                        </tr>
+                        <tr v-for='item in table4'>
+                            <td>{{item}}</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script src="vue.js"></script>
+<script src="index.js"></script>
